@@ -3,7 +3,7 @@ from sklearn.model_selection import train_test_split
 import numpy as np
 import pandas as pd
 
-data_dict = pickle.load(open('./data.pickle', 'rb'))
+data_dict = pickle.load(open('Data/data.pickle', 'rb'))
 
 data = np.asarray(data_dict['data'])
 labels = np.asarray(data_dict['labels'])
@@ -84,22 +84,22 @@ px.bar(data_frame = models, x = 'Score', y = 'Model', color = 'Score', template 
        title = 'Models Comparison')
 # <<==============================================================================================================>>
 
-f = open('Models/SVM_model.p', 'wb')
+f = open('ML_Models/SVM_model.p', 'wb')
 pickle.dump({'model': model_SVM}, f)
 f.close()
 
-f = open('Models/KNN_model.p', 'wb')
+f = open('ML_Models/KNN_model.p', 'wb')
 pickle.dump({'model': model_KNN}, f)
 f.close()
 
-f = open('Models/DTC_model.p', 'wb')
+f = open('ML_Models/DTC_model.p', 'wb')
 pickle.dump({'model': model_DTC}, f)
 f.close()
 
-f = open('Models/RFC_model.p', 'wb')
+f = open('ML_Models/RFC_model.p', 'wb')
 pickle.dump({'model': model_RFC}, f)
 f.close()
 
-f = open('Models/GBC_model.p', 'wb')
+f = open('ML_Models/GBC_model.p', 'wb')
 pickle.dump({'model': model_GBC}, f)
 f.close()
